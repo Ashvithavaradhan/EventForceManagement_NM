@@ -1,0 +1,7 @@
+Hello {!Event__c.OwnerFullName},
+
+Your cancellation request for {!Event__c.Name} was rejected.
+Event date: {!Event__c.Event_Date__c}
+The event status has been returned to Confirmed.
+
+EventForce Management System

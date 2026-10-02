@@ -1,0 +1,9 @@
+Hello,
+
+An approval request has been submitted to cancel the event.
+Event: {!Event__c.Name}
+Date: {!Event__c.Event_Date__c}
+Client: {!Event__c.Client__r.Name}
+
+Please review the request in Salesforce.
+EventForce Management System

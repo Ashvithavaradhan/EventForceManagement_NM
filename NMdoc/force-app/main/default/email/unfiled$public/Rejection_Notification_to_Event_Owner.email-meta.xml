@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Rejection Notification to Event Owner</name>
+    <style>none</style>
+    <subject>Event Cancellation Rejected: {!Event__c.Name}</subject>
+    <textOnly>Hello {!Event__c.OwnerFullName},
+
+Your cancellation request for {!Event__c.Name} was rejected.
+Event date: {!Event__c.Event_Date__c}
+The event status has been returned to Confirmed.
+
+EventForce Management System</textOnly>
+    <type>text</type>
+</EmailTemplate>

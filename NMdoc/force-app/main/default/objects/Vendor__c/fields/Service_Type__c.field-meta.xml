@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type__c</fullName>
+    <label>Service Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Catering</fullName>
+                <default>true</default>
+                <label>Catering</label>
+            </value>
+            <value>
+                <fullName>Decor</fullName>
+                <default>false</default>
+                <label>Decor</label>
+            </value>
+            <value>
+                <fullName>Sound &amp; Lighting</fullName>
+                <default>false</default>
+                <label>Sound &amp; Lighting</label>
+            </value>
+            <value>
+                <fullName>Photography</fullName>
+                <default>false</default>
+                <label>Photography</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>DJ/Music</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DJ/Music</label>
+            </value>
+            <value>
+                <fullName>Hosting/Anchor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hosting/Anchor</label>
+            </value>
+            <value>
+                <fullName>Lighting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lighting</label>
+            </value>
+            <value>
+                <fullName>Makeup Artist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Makeup Artist</label>
+            </value>
+            <value>
+                <fullName>Stage Setup</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stage Setup</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Videography</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Videography</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

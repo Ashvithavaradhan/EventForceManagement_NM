@@ -1,0 +1,67 @@
+<template>
+    <main class="dashboard">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading EventForce dashboard" size="medium"></lightning-spinner>
+        </template>
+
+        <header class="dashboard-header">
+            <div>
+                <p class="eyebrow">EVENTFORCE / OPERATIONS</p>
+                <h1>EventForce Operations Dashboard</h1>
+            </div>
+            <lightning-button-icon
+                icon-name="utility:refresh"
+                alternative-text="Refresh dashboard"
+                title="Refresh dashboard"
+                onclick={handleRefresh}
+            ></lightning-button-icon>
+        </header>
+
+        <template if:true={errorMessage}>
+            <div class="error-message" role="alert">{errorMessage}</div>
+        </template>
+
+        <template if:true={dashboardData}>
+            <section class="metric-grid" aria-label="Event summary">
+                <article class="metric metric-events">
+                    <p class="metric-label">Upcoming events</p>
+                    <p class="metric-value">
+                        <lightning-formatted-number value={dashboardData.upcomingCount}></lightning-formatted-number>
+                    </p>
+                </article>
+                <article class="metric metric-budget">
+                    <p class="metric-label">Upcoming event budget</p>
+                    <p class="metric-value">
+                        <lightning-formatted-number
+                            value={dashboardData.upcomingBudget}
+                            format-style="currency"
+                            currency-code="INR"
+                            maximum-fraction-digits="0"
+                        ></lightning-formatted-number>
+                    </p>
+                </article>
+            </section>
+
+            <section class="events-section" aria-labelledby="events-heading">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SCHEDULE</p>
+                        <h2 id="events-heading">Next events</h2>
+                    </div>
+                    <span class="event-count">{dashboardData.upcomingEvents.length} shown</span>
+                </div>
+                <template if:true={hasUpcomingEvents}>
+                    <lightning-datatable
+                        key-field="id"
+                        data={dashboardData.upcomingEvents}
+                        columns={columns}
+                        hide-checkbox-column
+                    ></lightning-datatable>
+                </template>
+                <template if:false={hasUpcomingEvents}>
+                    <p class="empty-state">No upcoming events found.</p>
+                </template>
+            </section>
+        </template>
+    </main>
+</template>

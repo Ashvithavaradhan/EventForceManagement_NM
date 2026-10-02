@@ -1,0 +1,8 @@
+Hello,
+
+Your event has been canceled.
+Event: {!Event__c.Name}
+Date: {!Event__c.Event_Date__c}
+
+Please contact Event Planner Solutions if you need assistance.
+EventForce Management System

@@ -1,0 +1,114 @@
+:host {
+    display: block;
+    color: #1c2925;
+}
+
+.dashboard {
+    padding: 1.5rem;
+}
+
+.dashboard-header,
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dashboard-header {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #d9e1dd;
+}
+
+.eyebrow {
+    margin: 0 0 0.3rem;
+    color: #536b61;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 1.45rem;
+    font-weight: 650;
+}
+
+h2 {
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    font-weight: 650;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.25rem 0;
+}
+
+.metric {
+    min-height: 7rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid #d9e1dd;
+    border-top: 3px solid #22745b;
+    background: #fff;
+}
+
+.metric-budget {
+    border-top-color: #d58a27;
+}
+
+.metric-label {
+    margin-bottom: 0.7rem;
+    color: #536b61;
+    font-size: 0.8rem;
+}
+
+.metric-value {
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 650;
+}
+
+.events-section {
+    border-top: 1px solid #d9e1dd;
+    padding-top: 1.2rem;
+}
+
+.section-heading {
+    margin-bottom: 0.9rem;
+}
+
+.event-count {
+    color: #536b61;
+    font-size: 0.8rem;
+}
+
+.empty-state,
+.error-message {
+    padding: 1rem;
+    border: 1px solid #d9e1dd;
+    background: #fff;
+}
+
+.error-message {
+    margin: 1rem 0;
+    border-color: #ba0517;
+    color: #8e030f;
+}
+
+@media (max-width: 48rem) {
+    .dashboard {
+        padding: 1rem;
+    }
+
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+}

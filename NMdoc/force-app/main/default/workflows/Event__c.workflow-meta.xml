@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Event_Cancellation_Request_Alert</fullName>
+        <description>Notify Event Coordinators when a cancellation is submitted.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Event_Coordinator</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Event_Cancellation_Request_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Cancellation_Approved_Alert</fullName>
+        <description>Notify the Event owner when cancellation is approved.</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_to_Client_After_Cancellation</template>
+    </alerts>
+    <alerts>
+        <fullName>Cancellation_Rejected_Alert</fullName>
+        <description>Notify the Event owner when cancellation is rejected.</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Rejection_Notification_to_Event_Owner</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Status_Canceled</fullName>
+        <description>Set the Event status to Canceled after approval.</description>
+        <field>Event_Status__c</field>
+        <literalValue>Canceled</literalValue>
+        <name>Set Event Status to Canceled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Confirmed</fullName>
+        <description>Return the Event status to Confirmed after rejection.</description>
+        <field>Event_Status__c</field>
+        <literalValue>Confirmed</literalValue>
+        <name>Set Event Status to Confirmed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>
